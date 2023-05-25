@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3308
--- Generation Time: May 19, 2023 at 06:36 PM
--- Server version: 8.0.31
--- PHP Version: 8.2.5
+-- Servidor: localhost:3306
+-- Tiempo de generación: 25-05-2023 a las 02:45:36
+-- Versión del servidor: 8.0.32
+-- Versión de PHP: 8.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `bdoutme`
+-- Base de datos: `bdoutme`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_conjuntos`
+-- Estructura de tabla para la tabla `tbl_conjuntos`
 --
 
 CREATE TABLE `tbl_conjuntos` (
@@ -36,7 +36,7 @@ CREATE TABLE `tbl_conjuntos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_perfil`
+-- Estructura de tabla para la tabla `tbl_perfil`
 --
 
 CREATE TABLE `tbl_perfil` (
@@ -52,7 +52,7 @@ CREATE TABLE `tbl_perfil` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_persona`
+-- Estructura de tabla para la tabla `tbl_persona`
 --
 
 CREATE TABLE `tbl_persona` (
@@ -63,16 +63,17 @@ CREATE TABLE `tbl_persona` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `tbl_persona`
+-- Volcado de datos para la tabla `tbl_persona`
 --
 
 INSERT INTO `tbl_persona` (`id`, `Usuario`, `Email`, `Contraseña`) VALUES
-(1, 'Yael', 'yael@gmail.com', '25f9e794323b453885f5181f1b624d0b');
+(1, 'yael', 'yael@gmail.com', '5289cd68a5281b5b34fafc4fda54cf43'),
+(2, 'Octavio', 'octavio@gmail.com', '25f9e794323b453885f5181f1b624d0b');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_prenda`
+-- Estructura de tabla para la tabla `tbl_prenda`
 --
 
 CREATE TABLE `tbl_prenda` (
@@ -85,118 +86,109 @@ CREATE TABLE `tbl_prenda` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `tbl_prenda`
+-- Volcado de datos para la tabla `tbl_prenda`
 --
 
 INSERT INTO `tbl_prenda` (`idPrenda`, `idPersona`, `FotoPrenda`, `Tipo`, `Color`, `Estilo`) VALUES
-(14, 1, 'img_prenda/abrigo1.jpg', 'Abrigo', 'Gris', 'Formal'),
-(15, 1, 'img_prenda/abrigo6.jpg', 'Abrigo', 'Gris', 'Formal'),
-(16, 1, 'img_prenda/bolsa5.jpg', 'Bolsa', 'Gris', 'Casual'),
-(17, 1, 'img_prenda/bota1.jpg', 'Bota', 'Cafe', 'Casual'),
-(18, 1, 'img_prenda/bota2.jpg', 'Bota', 'Cafe', 'Casual'),
-(19, 1, 'img_prenda/bota3.jpg', 'Bota', 'Gris', 'Casual'),
-(20, 1, 'img_prenda/bota4.jpg', 'Bota', 'Cafe', 'Casual'),
-(21, 1, 'img_prenda/bota5.jpg', 'Bota', 'Negro', 'Casual'),
-(22, 1, 'img_prenda/botita.jpg', 'Bota', 'Cafe', 'Casual'),
-(23, 1, 'img_prenda/camisa3.jpg', 'Camisa', 'Gris', 'Casual'),
-(24, 1, 'img_prenda/camisa4.jpg', 'Camisa', 'Negro', 'Casual'),
-(25, 1, 'img_prenda/mezclilla.png', 'Pantalon', 'Azul', 'Casual'),
-(26, 1, 'img_prenda/otroteni.png', 'Teni', 'Blanco', 'Casual'),
-(27, 1, 'img_prenda/panta3.jpg', 'Pantalon', 'Gris', 'Casual'),
-(28, 1, 'img_prenda/panto1.jpg', 'Pantalon', 'Azul', 'Casual'),
-(29, 1, 'img_prenda/play.jpg', 'Playera', 'Morado', 'Casual'),
-(30, 1, 'img_prenda/play1.jpg', 'Playera', 'Negro', 'Casual'),
-(31, 1, 'img_prenda/play3.jpg', 'Playera', 'Azul', 'Casual'),
-(32, 1, 'img_prenda/playera_roja.png', 'Playera', 'Rojo', 'Casual'),
-(33, 1, 'img_prenda/playeranara.png', 'Playera', 'Amarillo', 'Casual'),
-(34, 1, 'img_prenda/sanda2.jpg', 'Sandalia', 'Verde', 'Casual'),
-(35, 1, 'img_prenda/suda4.jpg', 'Sudadera', 'Azul', 'Casual'),
-(36, 1, 'img_prenda/sudaderaneg.jpg', 'Sudadera', 'Negro', 'Casual'),
-(37, 1, 'img_prenda/sudaderaveige.jfif', 'Sudadera', 'Cafe', 'Casual'),
-(38, 1, 'img_prenda/teniblanco.jpg', 'Teni', 'Blanco', 'Casual'),
-(39, 1, 'img_prenda/teninegro.png', 'Teni', 'Negro', 'Casual'),
-(40, 1, 'img_prenda/vestido4.jpg', 'Vestido', 'Blanco', 'Casual');
+(1, 1, 'img_prenda\\playera_roja.png', 'Playera', 'Rojo', 'Casual'),
+(2, 1, 'img_prenda\\vestido4.jpg', 'Vestido', 'Blanco', 'Formal'),
+(3, 1, 'img_prenda\\pantalon_azul.jpg', 'Pantalon', 'Azul', 'Casual'),
+(14, 1, 'img_prenda/camisa4.jpg', 'Camisa', 'Negro', 'Formal'),
+(15, 1, 'img_prenda/tenis_negros.png', 'Teni', 'Negro', 'Casual'),
+(16, 1, 'img_prenda/suda4.jpg', 'Sudadera', 'Azul', 'Casual'),
+(17, 1, 'img_prenda/panta4.jpg', 'Pantalon', 'Cafe', 'Casual'),
+(18, 1, 'img_prenda/abrigo6.jpg', 'Abrigo', 'Gris', 'Formal'),
+(19, 1, 'img_prenda/bolsa5.jpg', 'Bolsa', 'Gris', 'Casual'),
+(20, 1, 'img_prenda/vestido10.jpg.png', 'Vestido', 'Blanco', 'Formal'),
+(21, 1, 'img_prenda/camisa3.jpg', 'Playera', 'Rojo', 'Casual'),
+(22, 1, 'img_prenda/play3.jpg', 'Playera', 'Azul', 'Casual'),
+(23, 1, 'img_prenda/play1.jpg', 'Playera', 'Negro', 'Casual'),
+(24, 1, 'img_prenda/playeranara.png', 'Playera', 'Amarillo', 'Casual'),
+(25, 2, 'img_prenda/prenda_fondo_eliminado_646ebaaa101c0.png', 'Pantalon', 'Morado', 'Casual'),
+(26, 2, 'img_prenda/prenda_fondo_eliminado_323pll56100fg.png', 'Sudadera', 'Negro', 'Casual'),
+(27, 2, 'img_prenda/prenda_fondo_eliminado_642hhu46925bp.png', 'Pantalon', 'Azul', 'Casual'),
+(28, 2, 'img_prenda/prenda_fondo_eliminado_689lpo45203jg.png', 'Teni', 'Blanco', 'Deportivo');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `tbl_conjuntos`
+-- Indices de la tabla `tbl_conjuntos`
 --
 ALTER TABLE `tbl_conjuntos`
   ADD PRIMARY KEY (`idConjuntos`),
   ADD KEY `fk_idPersona` (`idPersona`);
 
 --
--- Indexes for table `tbl_perfil`
+-- Indices de la tabla `tbl_perfil`
 --
 ALTER TABLE `tbl_perfil`
   ADD PRIMARY KEY (`idPerfil`),
   ADD KEY `idPersona` (`idPersona`);
 
 --
--- Indexes for table `tbl_persona`
+-- Indices de la tabla `tbl_persona`
 --
 ALTER TABLE `tbl_persona`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tbl_prenda`
+-- Indices de la tabla `tbl_prenda`
 --
 ALTER TABLE `tbl_prenda`
   ADD PRIMARY KEY (`idPrenda`),
   ADD KEY `idPersona` (`idPersona`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `tbl_conjuntos`
+-- AUTO_INCREMENT de la tabla `tbl_conjuntos`
 --
 ALTER TABLE `tbl_conjuntos`
-  MODIFY `idConjuntos` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `idConjuntos` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `tbl_perfil`
+-- AUTO_INCREMENT de la tabla `tbl_perfil`
 --
 ALTER TABLE `tbl_perfil`
   MODIFY `idPerfil` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `tbl_persona`
+-- AUTO_INCREMENT de la tabla `tbl_persona`
 --
 ALTER TABLE `tbl_persona`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tbl_prenda`
+-- AUTO_INCREMENT de la tabla `tbl_prenda`
 --
 ALTER TABLE `tbl_prenda`
-  MODIFY `idPrenda` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `idPrenda` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `tbl_conjuntos`
+-- Filtros para la tabla `tbl_conjuntos`
 --
 ALTER TABLE `tbl_conjuntos`
   ADD CONSTRAINT `tbl_conjuntos_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `tbl_persona` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_perfil`
+-- Filtros para la tabla `tbl_perfil`
 --
 ALTER TABLE `tbl_perfil`
-  ADD CONSTRAINT `tbl_perfil_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `tbl_persona` (`id`);
+  ADD CONSTRAINT `tbl_perfil_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `tbl_persona` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tbl_prenda`
+-- Filtros para la tabla `tbl_prenda`
 --
 ALTER TABLE `tbl_prenda`
-  ADD CONSTRAINT `tbl_prenda_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `tbl_persona` (`id`);
+  ADD CONSTRAINT `tbl_prenda_ibfk_1` FOREIGN KEY (`idPersona`) REFERENCES `tbl_persona` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

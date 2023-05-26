@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 25-05-2023 a las 02:45:36
+-- Tiempo de generación: 26-05-2023 a las 00:41:38
 -- Versión del servidor: 8.0.32
 -- Versión de PHP: 8.2.2
 
@@ -62,14 +62,6 @@ CREATE TABLE `tbl_persona` (
   `Contraseña` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
---
--- Volcado de datos para la tabla `tbl_persona`
---
-
-INSERT INTO `tbl_persona` (`id`, `Usuario`, `Email`, `Contraseña`) VALUES
-(1, 'yael', 'yael@gmail.com', '5289cd68a5281b5b34fafc4fda54cf43'),
-(2, 'Octavio', 'octavio@gmail.com', '25f9e794323b453885f5181f1b624d0b');
-
 -- --------------------------------------------------------
 
 --
@@ -84,30 +76,6 @@ CREATE TABLE `tbl_prenda` (
   `Color` varchar(50) NOT NULL,
   `Estilo` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Volcado de datos para la tabla `tbl_prenda`
---
-
-INSERT INTO `tbl_prenda` (`idPrenda`, `idPersona`, `FotoPrenda`, `Tipo`, `Color`, `Estilo`) VALUES
-(1, 1, 'img_prenda\\playera_roja.png', 'Playera', 'Rojo', 'Casual'),
-(2, 1, 'img_prenda\\vestido4.jpg', 'Vestido', 'Blanco', 'Formal'),
-(3, 1, 'img_prenda\\pantalon_azul.jpg', 'Pantalon', 'Azul', 'Casual'),
-(14, 1, 'img_prenda/camisa4.jpg', 'Camisa', 'Negro', 'Formal'),
-(15, 1, 'img_prenda/tenis_negros.png', 'Teni', 'Negro', 'Casual'),
-(16, 1, 'img_prenda/suda4.jpg', 'Sudadera', 'Azul', 'Casual'),
-(17, 1, 'img_prenda/panta4.jpg', 'Pantalon', 'Cafe', 'Casual'),
-(18, 1, 'img_prenda/abrigo6.jpg', 'Abrigo', 'Gris', 'Formal'),
-(19, 1, 'img_prenda/bolsa5.jpg', 'Bolsa', 'Gris', 'Casual'),
-(20, 1, 'img_prenda/vestido10.jpg.png', 'Vestido', 'Blanco', 'Formal'),
-(21, 1, 'img_prenda/camisa3.jpg', 'Playera', 'Rojo', 'Casual'),
-(22, 1, 'img_prenda/play3.jpg', 'Playera', 'Azul', 'Casual'),
-(23, 1, 'img_prenda/play1.jpg', 'Playera', 'Negro', 'Casual'),
-(24, 1, 'img_prenda/playeranara.png', 'Playera', 'Amarillo', 'Casual'),
-(25, 2, 'img_prenda/prenda_fondo_eliminado_646ebaaa101c0.png', 'Pantalon', 'Morado', 'Casual'),
-(26, 2, 'img_prenda/prenda_fondo_eliminado_323pll56100fg.png', 'Sudadera', 'Negro', 'Casual'),
-(27, 2, 'img_prenda/prenda_fondo_eliminado_642hhu46925bp.png', 'Pantalon', 'Azul', 'Casual'),
-(28, 2, 'img_prenda/prenda_fondo_eliminado_689lpo45203jg.png', 'Teni', 'Blanco', 'Deportivo');
 
 --
 -- Índices para tablas volcadas
@@ -148,7 +116,7 @@ ALTER TABLE `tbl_prenda`
 -- AUTO_INCREMENT de la tabla `tbl_conjuntos`
 --
 ALTER TABLE `tbl_conjuntos`
-  MODIFY `idConjuntos` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `idConjuntos` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_perfil`
@@ -166,7 +134,7 @@ ALTER TABLE `tbl_persona`
 -- AUTO_INCREMENT de la tabla `tbl_prenda`
 --
 ALTER TABLE `tbl_prenda`
-  MODIFY `idPrenda` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `idPrenda` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- Restricciones para tablas volcadas

@@ -1,5 +1,3 @@
 img_prenda/playeranara.png
-img_prenda/panta4.jpg
-img_prenda/tenis_negros.png
-img_prenda/suda4.jpg
-img_prenda/bolsa5.jpg
+img_prenda/prenda_fondo_eliminado_642hhu46925bp.png
+img_prenda/prenda_fondo_eliminado_646ef7cc718d2.png

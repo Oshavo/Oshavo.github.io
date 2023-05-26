@@ -110,8 +110,8 @@ if(!isset($user)){
                 </div>
               </div>
             </form>
-            <a href="algoritmo.php" class="btn btn-primary" style="background-color: white; border-color: black; color: black;">Generar conjunto automáticamente</a>
-            <a href="outfitman.php" class="btn btn-primary" style="background-color: white; border-color: black; color: black;">Generar conjunto de manera manual</a> 
+            <a href="algoritmo.php" class="btn btn-primary" >Generar conjunto automáticamente</a>
+            <a href="outfitman.php" class="btn btn-primary" >Generar conjunto de manera manual</a> 
           </div>
         </div>
       </div>

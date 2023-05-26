@@ -4,25 +4,53 @@ session_start();
 
 $user = $_SESSION['usuario'];
 $consulta = "SELECT * FROM Tbl_Perfil a INNER JOIN Tbl_Persona b ON a.idPersona = b.id";
-
 $resultado = $conn->query($consulta);
 
-while($data = $resultado->fetch_array()){
-  $id = $data['id'];
-  $nusuario = $data['Usuario'];
-  $nombrecom = $data['Nombre'];
-  $apellidop = $data['ApellidoP'];
-  $apellidom = $data['ApellidoM'];
-  $correo = $data['Email'];
-  $telefono = $data['Telefono'];
-  $contraseña = $data['Contraseña'];
-  $foto = $data['Foto'];
+$nombrecom = "";
+$apellidop = "";
+$apellidom = "";
+$telefono = "";
+$contraseña = "";
+$foto = "";
+
+while ($data = $resultado->fetch_array()) {
+    $id = $data['id'];
+    $nombrecom = $data['Nombre'];
+    $apellidop = $data['ApellidoP'];
+    $apellidom = $data['ApellidoM'];
+    $telefono = $data['Telefono'];
+    $contraseña = $data['Contraseña'];
+    $foto = $data['Foto'];
+}
+
+$consulta2 = "SELECT * FROM Tbl_Persona";
+$resultado2 = $conn->query($consulta2);
+
+while ($data2 = $resultado2->fetch_array()) {
+    $nusuario = $data2['Usuario'];
+    $correo = $data2['Email'];
+}
+
+if(empty($nombrecom)) {
+    $nombrecom = "Sin Nombre Registrado";
+}
+if(empty($apellidop)) {
+    $apellidop = "Sin Apellido Paterno Registrado";
+}
+if(empty($apellidom)) {
+    $apellidom = "Sin Apellido Materno Registrado";
+}
+if(empty($telefono)) {
+    $telefono = "Sin Telefono Registrado";
+}
+if(empty($foto)) {
+  $foto = 'img_profile/perfil-foto.png';
 }
 
 date_default_timezone_set('America/Mexico_City');
 $fecha_actual = date("d-m-Y h:i:s");
 
-if(!isset($user)){
+if (!isset($user)) {
     echo '
         <script>
             alert("Debes iniciar sesión");
@@ -30,9 +58,10 @@ if(!isset($user)){
         </script>
     ';
     session_destroy();
-    die();    
+    die();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>

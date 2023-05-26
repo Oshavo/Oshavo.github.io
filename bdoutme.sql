@@ -21,7 +21,9 @@ SET time_zone = "+00:00";
 -- Base de datos: `bdoutme`
 --
 
--- --------------------------------------------------------
+DROP DATABASE IF EXISTS `bdoutme`;
+CREATE DATABASE `bdoutme`;
+USE DATABASE `bdoutme`;
 
 --
 -- Estructura de tabla para la tabla `tbl_conjuntos`

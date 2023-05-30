@@ -25,7 +25,7 @@ if(isset($_POST["idPersona"])){
         echo "<script>alert('El campo de la imagen no debe estar vacío')</script>";
         echo '
             <script>
-                window.location = "filtros.php";
+                window.location = "micloset.php";
             </script>
             ';
         die();
@@ -46,7 +46,7 @@ if(isset($_POST["idPersona"])){
         }
     echo '
     <script>
-        window.location = "filtros.php";
+        window.location = "micloset.php";
     </script>
     ';
     die();
@@ -69,14 +69,14 @@ if(((strpos($img_type, "gif") || strpos($img_type, "jpeg") || strpos($img_type, 
         echo'
         <script>
             alert("Prenda registrada con éxito");
-            window.location = "filtros.php";
+            window.location = "micloset.php";
         </script>
         ';
     }else{
         echo'
         <script>
             alert("Error al registrar la prenda, favor de intentar más tarde");
-            window.location = "filtros.php";
+            window.location = "micloset.php";
         </script>
         ';
     }

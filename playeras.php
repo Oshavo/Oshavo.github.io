@@ -135,7 +135,7 @@ if(!isset($user)){
           </div>
         </div>
       </div>
-      <center><a href ="filtros.php">
+      <center><a href ="filtrosplayeras.php">
             <span><input type="button" value="Añadir" class="btn btn-primary"></span></a></center>
     </section>
 

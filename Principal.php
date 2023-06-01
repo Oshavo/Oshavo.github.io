@@ -49,7 +49,7 @@
 
           <div class="inner">
             <div class="media d-block feature text-center">
-              <img src="images/person_1.jpeg" alt="Image placeholder" class="mb-3">
+              <img src="images/person_1.png" alt="Image placeholder" class="mb-3">
               <div class="media-body">
                 <h3 class="mt-0">Lagunas Orduña Sara</h3>
                 <p class="instructor-meta">CEO y Diseñadora de Software</p>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="media d-block feature text-center">
-              <img src="images/person_2.jpeg" alt="Image placeholder" class="mb-3">
+              <img src="images/person_2.png" alt="Image placeholder" class="mb-3">
               <div class="media-body">
                 <h3 class="mt-0">Rojas Mejía Luis Yael </h3>
                 <p class="instructor-meta">Desarrollador y Arquitecto de Software</p>
@@ -67,7 +67,7 @@
             </div>
 
             <div class="media d-block feature text-center">
-              <img src="images/person_3.jpg" alt="Image placeholder" class="mb-3">
+              <img src="images/person_4.png" alt="Image placeholder" class="mb-3">
               <div class="media-body">
                 <h3 class="mt-0">De la Rosa Valdes Itztli Fernanda</h3>
                 <p class="instructor-meta">Diseñadora de Software</p>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="media d-block feature text-center">
-              <img src="images/person_4.jpeg" alt="Image placeholder" class="mb-3">
+              <img src="images/person_3.png" alt="Image placeholder" class="mb-3">
               <div class="media-body">
                 <h3 class="mt-0">Posadas Villegas Octavio</h3>
                 <p class="instructor-meta">Desarrollador y Analista de Software</p>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="media d-block feature text-center">
-              <img src="images/person_5.jpg" alt="Image placeholder" class="mb-3">
+              <img src="images/person_s.png" alt="Image placeholder" class="mb-3">
               <div class="media-body">
                 <h3 class="mt-0">Sanchez Martinez Emiliano</h3>
                 <p class="instructor-meta">Desarrollador y Encargado del Marketing</p>
@@ -94,7 +94,7 @@
             </div>
 
             <div class="media d-block feature text-center">
-              <img src="images/person_6.jpg" alt="Image placeholder" class="mb-3">
+              <img src="images/person_p.png" alt="Image placeholder" class="mb-3">
               <div class="media-body">
                 <h3 class="mt-0">Sanchez Rolon Pedro</h3>
                 <p class="instructor-meta">Encargado del Soporte Técnico</p>

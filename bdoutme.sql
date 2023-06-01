@@ -1,3 +1,6 @@
+DROP DATABASE IF EXISTS `bdoutme`;
+CREATE DATABASE `bdoutme`;
+USE bdoutme;
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
@@ -20,16 +23,11 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bdoutme`
 --
-
-DROP DATABASE IF EXISTS `bdoutme`;
-CREATE DATABASE `bdoutme`;
-USE DATABASE `bdoutme`;
-
 --
 -- Estructura de tabla para la tabla `tbl_conjuntos`
 --
 
-CREATE TABLE `tbl_conjuntos` (
+CREATE TABLE `bdoutme`.`tbl_conjuntos` (
   `idConjuntos` int NOT NULL,
   `idPersona` int NOT NULL,
   `FotoOutfit` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
@@ -41,7 +39,7 @@ CREATE TABLE `tbl_conjuntos` (
 -- Estructura de tabla para la tabla `tbl_perfil`
 --
 
-CREATE TABLE `tbl_perfil` (
+CREATE TABLE `bdoutme`.`tbl_perfil` (
   `idPerfil` int NOT NULL,
   `idPersona` int NOT NULL,
   `Nombre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
@@ -57,7 +55,7 @@ CREATE TABLE `tbl_perfil` (
 -- Estructura de tabla para la tabla `tbl_persona`
 --
 
-CREATE TABLE `tbl_persona` (
+CREATE TABLE `bdoutme`.`tbl_persona` (
   `id` int NOT NULL,
   `Usuario` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
@@ -70,7 +68,7 @@ CREATE TABLE `tbl_persona` (
 -- Estructura de tabla para la tabla `tbl_prenda`
 --
 
-CREATE TABLE `tbl_prenda` (
+CREATE TABLE `bdoutme`.`tbl_prenda` (
   `idPrenda` int NOT NULL,
   `idPersona` int NOT NULL,
   `FotoPrenda` text NOT NULL,

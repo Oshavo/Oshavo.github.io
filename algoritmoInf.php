@@ -3,7 +3,7 @@ include "db.php";
 session_start();
 
 $user = $_SESSION['usuario'];
-$consulta = "SELECT * FROM Tbl_Prenda a INNER JOIN Tbl_Persona b ON a.idPersona = b.id WHERE Tipo IN ('Pantalon')";
+$consulta = "SELECT * FROM Tbl_Prenda a INNER JOIN Tbl_Persona b ON a.idPersona = b.id WHERE Tipo IN ('Pantalon', 'Falda')";
 
 $resultado = $conn->query($consulta);
 

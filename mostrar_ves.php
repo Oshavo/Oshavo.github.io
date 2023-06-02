@@ -22,7 +22,7 @@ if (isset($_POST['imagenesSeleccionadas'])) {
 
 // Obtén las dos imágenes aleatorias adicionales de la tabla tbl_prenda
 
-  $resultadoTeniBota = mysqli_query($conn, "SELECT FotoPrenda FROM tbl_prenda WHERE Tipo IN ('Bota') ORDER BY RAND() LIMIT 1");
+  $resultadoTeniBota = mysqli_query($conn, "SELECT FotoPrenda FROM tbl_prenda WHERE Tipo IN ('Bota', 'Tacon') ORDER BY RAND() LIMIT 1");
   $imagenTeniBota = mysqli_fetch_assoc($resultadoTeniBota)['FotoPrenda'];
 ?>
 

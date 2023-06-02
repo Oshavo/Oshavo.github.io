@@ -109,7 +109,7 @@ if(!isset($_SESSION['usuario'])){
                 <div class="col-md-4 form-group">
                   <label for="tipo">Tipo</label>
                   <select name="Tipo">
-                    <option value="Playera" selected>Playeras</option>
+                    <option value="Playera">Playeras</option>
                     <option value="Bolsa">Bolsas</option>
                     <option value="Abrigo">Abrigos</option>
                     <option value="Camisa">Camisas</option>
@@ -120,7 +120,7 @@ if(!isset($_SESSION['usuario'])){
                     <option value="Sandalia">Sandalias</option>
                     <option value="Vestido">Vestidos</option>
                     <option value="Tacon">Tacones</option>
-                    <option value="Zapato">Zapatos</option>
+                    <option value="Zapato" selected>Zapatos</option>
                     <option value="Chamarra">Chamarras</option>
                     <option value="Blusa">Blusas</option>
                     <option value="Falda">Faldas</option>
@@ -161,7 +161,7 @@ if(!isset($_SESSION['usuario'])){
               </div>
             </form>
             <div class="col-md-6 form-group">
-                  <a href="playeras.php"><button class="btn btn-primary">Volver</button></a>
+                  <a href="zapatos.php"><button class="btn btn-primary">Volver</button></a>
             </div>
           </div>
         </div>

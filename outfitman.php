@@ -4,7 +4,7 @@ session_start();
 
 $usuario = $_SESSION['usuario'];
 //Superior
-$consultaSup = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Playera', 'Camisa', 'Vestido')";
+$consultaSup = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Playera', 'Camisa', 'Vestido', 'Blusa')";
 $resultadoSup = mysqli_query($conn, $consultaSup);
 $filaSup = mysqli_fetch_assoc($resultadoSup);
 $idPersona = $filaSup["id"];
@@ -20,7 +20,7 @@ while($data = $resultadoSup->fetch_array()){
 }
 
 //Inferior
-$consultaInf = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Pantalon')";
+$consultaInf = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Pantalon', 'Falda')";
 $resultadoInf = mysqli_query($conn, $consultaInf);
 $filaInf = mysqli_fetch_assoc($resultadoInf);
 $idPersona = $filaInf["id"];
@@ -36,7 +36,7 @@ while($data = $resultadoInf->fetch_array()){
 }
 
 //Calzado
-$consultaCal = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Teni', 'Bota', 'Sandalia')";
+$consultaCal = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Teni', 'Bota', 'Sandalia', 'Zapato', 'Tacon')";
 $resultadoCal = mysqli_query($conn, $consultaCal);
 $filaCal = mysqli_fetch_assoc($resultadoCal);
 $idPersona = $filaCal["id"];
@@ -52,7 +52,7 @@ while($data = $resultadoCal->fetch_array()){
 }
 
 //Opcional
-$consultaOpc = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Sudadera', 'Abrigo')";
+$consultaOpc = "SELECT * FROM Tbl_Prenda p INNER JOIN Tbl_Persona per ON p.idPersona = per.id WHERE per.Usuario = '$usuario' AND p.Tipo IN ('Sudadera', 'Abrigo', 'Chamarra')";
 $resultadoOpc = mysqli_query($conn, $consultaOpc);
 $filaOpc = mysqli_fetch_assoc($resultadoOpc);
 $idPersona = $filaOpc["id"];

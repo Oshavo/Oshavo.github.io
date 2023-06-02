@@ -119,6 +119,11 @@ if(!isset($_SESSION['usuario'])){
                     <option value="Sudadera">Sudaderas</option>
                     <option value="Sandalia">Sandalias</option>
                     <option value="Vestido" selected>Vestidos</option>
+                    <option value="Tacon">Tacones</option>
+                    <option value="Zapato">Zapatos</option>
+                    <option value="Chamarra">Chamarras</option>
+                    <option value="Blusa">Blusas</option>
+                    <option value="Falda">Faldas</option>
                   </select>
                 </div>
                 <div class="col-md-4 form-group">

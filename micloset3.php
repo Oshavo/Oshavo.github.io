@@ -84,42 +84,40 @@ if(!isset($_SESSION['usuario'])){
             <div class="container">
                 <div id="btn_modulos">
                   <p class="imgThumb">
-                    <a href="playeras.php">
-                    <img src="images/playera.jpg" alt="">
-                    <span><input type="button" value="Playeras"></span></a>
+                    <a href="tacones.php">
+                    <img src="images/tacones.jpg" alt="">
+                    <span><input type="button" value="Tacones"></span></a>
                   </p>
                   <p class="imgThumb">
-                    <a href="bolsas.php">
-                    <img src="images/bolsa.jpg" alt="">
-                    <span><input type="button" value="Bolsos"></span></a>
+                    <a href="zapatos.php">
+                    <img src="images/zapatoo.jpg" alt="">
+                    <span><input type="button" value="Zapatos"></span></a>
                   </p>
                   <p class="imgThumb">
-                    <a href="abrigos.php">
-                    <img src="images/abrigo.jpg" alt="">
-                    <span><input type="button" value="Abrigos"></span></a>
+                    <a href="chamarras.php">
+                    <img src="images/chamarraa.jpg" alt="">
+                    <span><input type="button" value="Chamarras"></span></a>
                   </p>
                   <p class="imgThumb">
-                    <a href="camisas.php">
-                    <img src="images/camisa.jpg" alt="">
-                    <span><input type="button" value="Camisas"></span></a>
+                    <a href="blusas.php">
+                    <img src="images/blusa.jpg" alt="">
+                    <span><input type="button" value="Blusas"></span></a>
                   </p>
                   <p class="imgThumb">
-                    <a href="pantalones.php">
-                    <img src="images/pantalon.jpg" alt="">
-                    <span><input type="button" value="Pantalones"></span></a>
-                  </p>                               
+                    <a href="faldas.php">
+                    <img src="images/faldaa.jpg" alt="">
+                    <span><input type="button" value="Faldas"></span></a>
                   </p>
                 </div>
                 <br>
             </div>
             <br><br><br>
             <div class="container">
-            <center><a href="micloset2.php"><button class="btn btn-primary">Siguiente</button></a></center>
+            <center><a href="micloset2.php"><button class="btn btn-primary">Anterior</button></a></center>
             </div>
           </section>
-          
 
-        <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+        <div id="loader" ><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
 
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.0.js"></script>

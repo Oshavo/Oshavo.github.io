@@ -1,7 +1,21 @@
 <?php
+include "db.php";
 session_start();
 
-if(!isset($_SESSION['usuario'])){
+$user = $_SESSION['usuario'];
+$consulta = "SELECT * FROM Tbl_Prenda a INNER JOIN Tbl_Persona b ON a.idPersona = b.id WHERE a.Tipo = 'Tacon'";
+
+$resultado = $conn->query($consulta);
+
+while($data = $resultado->fetch_array()){
+  $id = $data['id'];
+  $tipo = $data['Tipo'];
+  $color = $data['Color'];
+  $estilo = $data['Estilo'];
+  $fotoprenda = $data['FotoPrenda'];
+}
+
+if(!isset($user)){
     echo '
         <script>
             alert("Debes iniciar sesión");
@@ -26,7 +40,11 @@ if(!isset($_SESSION['usuario'])){
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/animate.css">
         <link rel="stylesheet" href="css/owl.carousel.min.css">
-
+        <link rel="stylesheet" href="css/fotos.css">
+          <link rel="stylesheet" href="css/fresco.css">
+          <link rel="stylesheet" href="css/slick.css">
+          <link rel="stylesheet" href="css/slicknav.min.css">
+          <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
         <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
@@ -55,6 +73,7 @@ if(!isset($_SESSION['usuario'])){
                         <a class="dropdown-item" href="micloset.php">MiClóset</a>
                         <a class="dropdown-item" href="Boceto.php">Cámara</a>
                         <a class="dropdown-item" href="outme.php">OutMe</a>
+                        <a class="dropdown-item" href="misconjuntos.php">MisConjuntos</a>
                       </div>
                     </li> 
       
@@ -67,59 +86,56 @@ if(!isset($_SESSION['usuario'])){
                   </ul>
                   <ul class="navbar-nav absolute-right">
                     <li class="nav-item">
-                      <a href="perfil.php" class="nav-link">Ir al perfil</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="logout.php" class="nav-link">Cerrar Sesión</a>
+                    <a href="logout.php" class="nav-link">Cerrar Sesión</a>
                     </li>
                   </ul>
                   
                 </div>
               </div>
             </nav>
-          </header>
+        </header>
 
-          <section class="site-hero overlay" style="background-image: url(images/big_image_1.jpg);">
-            <br><br><br><br>
-            <div class="container">
-                <div id="btn_modulos">
-                  <p class="imgThumb">
-                    <a href="playeras.php">
-                    <img src="images/playera.jpg" alt="">
-                    <span><input type="button" value="Playeras"></span></a>
-                  </p>
-                  <p class="imgThumb">
-                    <a href="bolsas.php">
-                    <img src="images/bolsa.jpg" alt="">
-                    <span><input type="button" value="Bolsos"></span></a>
-                  </p>
-                  <p class="imgThumb">
-                    <a href="abrigos.php">
-                    <img src="images/abrigo.jpg" alt="">
-                    <span><input type="button" value="Abrigos"></span></a>
-                  </p>
-                  <p class="imgThumb">
-                    <a href="camisas.php">
-                    <img src="images/camisa.jpg" alt="">
-                    <span><input type="button" value="Camisas"></span></a>
-                  </p>
-                  <p class="imgThumb">
-                    <a href="pantalones.php">
-                    <img src="images/pantalon.jpg" alt="">
-                    <span><input type="button" value="Pantalones"></span></a>
-                  </p>                               
-                  </p>
+    <section class="site-hero overlay" data-stellar-background-ratio="0.5" style="background-image: url(images/big_image_3.jpg);">
+      <div class="container">
+        <div class="row align-items-center site-hero-inner justify-content-center">
+          <div class="col-md-8 text-center">
+
+            <div class="mb-5 element-animate">
+              <h1>Tus Tacones</h1>
+              <p class="lead">A continuacion verás los tacones que has subido a la nube.</p>
+            </div>          
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="site-section bg-light ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <!--Aqui empieza la galeria-->
+            <div class="gallery__page">
+            <div class="gallery__warp">
+              <div class="row">
+                <?php foreach($resultado as $row){?>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <a class="gallery__item fresco" src="<?php echo $row['FotoPrenda']?>" data-fresco-group="gallery">
+                      <img src="<?php echo $row['FotoPrenda']?>" alt="">
+                    </a>
+                    <h5><?php echo $row['Color']?></h5>
+                    <h5><?php echo $row['Estilo']?></h5>
                 </div>
-                <br>
+                <?php }?>
+              </div>
             </div>
-            <br><br><br>
-            <div class="container">
-            <center><a href="micloset2.php"><button class="btn btn-primary">Siguiente</button></a></center>
-            </div>
-          </section>
-          
+          </div>
+        <!-- Aqui termina la galeria-->
 
-        <div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#f4b214"/></svg></div>
+          </div>
+        </div>
+      </div>
+      <center><a href ="filtrostacones.php">
+            <span><input type="button" value="Añadir" class="btn btn-primary"></span></a></center>
+    </section>
 
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="js/jquery-migrate-3.0.0.js"></script>

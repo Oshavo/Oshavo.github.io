@@ -99,7 +99,7 @@ if(!isset($_SESSION['usuario'])){
               <input class="btn btn-outline-primary" type="file" name="FotoPrenda" onchange="mostrarImagen(event)"> <!-- añade el atributo onchange -->
               <div class="row">
                 <div class="col-md-4 form-group">
-                  <img id="imagen_preview" src="img_prenda/prenda-foto.png" alt="FotoPrenda" style="border: solid black 3px; border-radius: 5px; margin: 20px; width: 480px; height: 600px;"> <!-- añade el id -->
+                  <img id="imagen_preview" src="images/prenda-foto.png" alt="FotoPrenda" style="border: solid black 3px; border-radius: 5px; margin: 20px; width: 480px; height: 600px;"> <!-- añade el id -->
                 </div>
               </div>
               <div class="row">
@@ -132,7 +132,7 @@ if(!isset($_SESSION['usuario'])){
                 </div>
               </div>
             </form>
-            <a href="filtros.php">
+            <a href="Boceto.php">
                 <button class="btn btn-primary" style="background-color: white; border-color: black; color: black;">No</button>
             </a>
             <script>

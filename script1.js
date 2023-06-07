@@ -41,21 +41,48 @@ if (tieneSoporteUserMedia()) {
 
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-                        console.log("La foto fue enviada correctamente");
-                        console.log(xhr);
-
-                        var imagenConFondoEliminado = xhr.responseText;
-                        // Mostrar la imagen con fondo eliminado en un elemento <img> en tu página web
+                      console.log("La foto fue enviada correctamente");
+                      console.log(xhr);
+                  
+                      var imagenConFondoEliminado = xhr.responseText;
+                  
+                      // Eliminar el fondo de la imagen utilizando la API de Remove.bg
+                      eliminarFondo(imagenConFondoEliminado);
+                    }
+                  }
+                  
+                  function eliminarFondo(imagen) {
+                    // Realizar la llamada a la API de Remove.bg para eliminar el fondo de la imagen
+                    var xhrEliminarFondo = new XMLHttpRequest();
+                    xhrEliminarFondo.open("POST", "https://api.remove.bg/v1.0/removebg", true);
+                    xhrEliminarFondo.setRequestHeader("X-Api-Key", "SK1EWe3Nr3snojRx5H5XS7Jt"); // Reemplaza "TU_API_KEY" con tu clave de API de Remove.bg
+                    xhrEliminarFondo.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xhrEliminarFondo.onreadystatechange = function() {
+                      if (xhrEliminarFondo.readyState == XMLHttpRequest.DONE && xhrEliminarFondo.status == 200) {
+                        console.log("Fondo eliminado correctamente");
+                        console.log(xhrEliminarFondo);
+                  
+                        var imagenSinFondo = xhrEliminarFondo.responseText;
+                  
+                        // Mostrar la imagen sin fondo en un elemento <img> en tu página web
                         var $imagenResultado = document.getElementById("imagenResultado");
-                        $imagenResultado.src = imagenConFondoEliminado;
+                        $imagenResultado.src = imagenSinFondo;
                         $imagenResultado.style.display = "block";
                         $imagenResultado.style.maxWidth = "100%";
                         $imagenResultado.style.height = "auto";
-
-                        $estado.innerHTML = "Foto tomada con éxito." 
-                        //Puedes verla <a target='_blank' href='./" + xhr.responseText + "'> aquí</a>";
+                  
+                        // Guardar la imagen sin fondo en la carpeta img_prenda
+                        var xhrGuardar = new XMLHttpRequest();
+                        xhrGuardar.open("POST", "./guardar_imagen_sin_fondo.php", true);
+                        xhrGuardar.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                        xhrGuardar.send("imagen=" + encodeURIComponent(imagenSinFondo));
+                  
+                        $estado.innerHTML = "Foto tomada con éxito.";
+                      }
                     }
-                }
+                  
+                    xhrEliminarFondo.send("image_url=" + encodeURIComponent(imagen));
+                  }
 
                 //Reanudar reproducción
                 $video.play();

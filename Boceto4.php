@@ -128,7 +128,7 @@ if(!isset($_SESSION['usuario'])){
           <button class="btn btn-primary" style="background-color: white; border-color: black; color: black;">Guardar en el Closet</button>
         </a>
         &nbsp;&nbsp;
-        <a href="filtros.php">
+        <a href="filtrosplayeras.php">
           <button class="btn btn-primary" style="background-color: white; border-color: black; color: black;">Filtrar de manera manual</button>
         </a>
         <p id="estado" style="color:#000"></p>
@@ -137,6 +137,7 @@ if(!isset($_SESSION['usuario'])){
       <center>
       <video muted="muted" id="video"></video>
       <canvas id="canvas" style="display: none;"></canvas>
+      <img id="imagenResultado" style="display: none;"></img>
       </center>
       <script src="script1.js"></script>
       <script src="js/jquery-3.2.1.min.js"></script>

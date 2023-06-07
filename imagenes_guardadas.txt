@@ -1,3 +1,4 @@
-img_prenda/playeraneg.jpg
-img_prenda/pantacafe.jpg
-img_prenda/tenis_negros.png
+img_prenda/blusa1.jpeg
+img_prenda/falda1.jpg
+img_prenda/tenis2.jpeg
+img_prenda/bolso3.jpeg

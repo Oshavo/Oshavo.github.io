@@ -70,6 +70,25 @@ if (label == "Abrigo"){
 } else if (label == "Vestido"){
     emoji = "👗";
     mensaje = "Clasificación exitosa";
+} else if (label == "Tacon"){
+    emoji = "👠";
+    mensaje = "Clasificación exitosa";
+}
+else if (label == "Blusa"){
+    emoji = "👚";
+    mensaje = "Clasificación exitosa";
+}
+else if (label == "Zapato"){
+    emoji = "👞";
+    mensaje = "Clasificación exitosa";
+}
+else if (label == "Chamarra"){
+    emoji = "🧥";
+    mensaje = "Clasificación exitosa";
+}
+else if (label == "Falda"){
+    emoji = "👗";
+    mensaje = "Clasificación exitosa";
 }
 
 textSize(64);

@@ -143,7 +143,7 @@ if(!isset($_SESSION['usuario'])){
             </center>
         <br><br><br>
       </div>
-      <script src="script_estilo.js"></script>
+      <script src="script_estilo.js" type="module"></script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/jquery-migrate-3.0.0.js"></script>
       <script src="js/popper.min.js"></script>

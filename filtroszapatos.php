@@ -220,6 +220,6 @@ if(!isset($_SESSION['usuario'])){
     }
     </script>
     
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

@@ -142,7 +142,7 @@ if(!isset($user)){
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
     <script src="js/vendor/jquery-3.2.1.min.js"></script>
     <script src="js/jquery.slicknav.min.js"></script>
     <script src="js/slick.min.js"></script>

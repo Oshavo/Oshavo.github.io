@@ -92,7 +92,6 @@ if(isset($_SESSION['usuario'])){
                   </form>
                   
                 <div class="link">¿Aún no estás registrado? <a href="register.php">Regístrate</a></div>
-                <div class="link">¿Olvidaste tu contraseña? <a id="myBtn">Recupérala</a></div>
                 
               </section>
             </div>
@@ -144,6 +143,6 @@ if(isset($_SESSION['usuario'])){
     <script src="js/jquery.stellar.min.js"></script>
 
     
-    <script src="js/main.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>

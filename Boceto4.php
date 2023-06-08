@@ -139,7 +139,7 @@ if(!isset($_SESSION['usuario'])){
       <canvas id="canvas" style="display: none;"></canvas>
       <img id="imagenResultado" style="display: none;"></img>
       </center>
-      <script src="script1.js" type="module"></script>
+      <script src="script1.js"></script>
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/jquery-migrate-3.0.0.js"></script>
       <script src="js/popper.min.js"></script>

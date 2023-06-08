@@ -1,3 +1,5 @@
+//ESTE SI ES UN MODULE
+
 // variable usada como el clasificador
 let classifier;
 // URL de los modelos en Teachable Machine
@@ -9,11 +11,11 @@ let label = "Espera un momento...";
 let Tipo;
 
 // Cargar los mdoelos
-function preload() {
+export function preload() {
 classifier = ml5.imageClassifier(imageModelURL + 'model.json');
 }
 
-function setup() {
+export function setup() {
 createCanvas(224, 224);
 // Crear el video
 video = createCapture(VIDEO);
@@ -25,7 +27,7 @@ flippedVideo = ml5.flipImage(video)
 classifyVideo();
 }
 
-function draw() {
+export function draw() {
 background(0);
 // Imprimir el video
 image(flippedVideo, 0, 0);

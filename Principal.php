@@ -150,6 +150,6 @@
     <script src="js/jquery.stellar.min.js"></script>
 
     
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

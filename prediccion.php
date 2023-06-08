@@ -201,6 +201,6 @@ if(!isset($_SESSION['usuario'])){
     }
     </script>
     
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
